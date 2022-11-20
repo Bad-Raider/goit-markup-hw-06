@@ -7,6 +7,7 @@
   --secondary-background-page: #f5f4fa;
   --tertiary-background-page: #2f303a;
   --accent-color: #2196f3;
+  --secondary-accent-color:#188CE8;
   --primary-color-logo: #afb1b8;
   --primary-line-height: 1.2;
   --secondary-line-height: 1.7;
@@ -459,8 +460,7 @@ input {
 .label-mail,
 .label-phone {
   position: relative;
-  
-  transition: color 250ms  cubic-bezier(0.4, 0, 0.2, 1),
+
 }
 
 
@@ -476,6 +476,8 @@ input {
 .label-phone:hover .icon-phone-form,
 .label-mail:hover .icon-email-form {
   fill: var(--accent-color);
+  transition: fill 250ms  cubic-bezier(0.4, 0, 0.2, 1)
+
 }
 
 .input-name,
@@ -488,6 +490,8 @@ input {
 .label-phone:hover .input-phone,
 .label-mail:hover .input-mail {
 border-color: var(--accent-color);
+transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
+
 }
 
 
@@ -511,19 +515,42 @@ border-color: var(--accent-color);
   resize: none;
 }
 
-.label-checkbox {
-  display: flex;
-  padding-bottom: 0px;
-  justify-content:space-evenly;
+/* ===============================
+======== Кастомний чекбокс =======
+================================== */
 
+.checkbox-flex {
+  display: flex;
+  /* justify-content: center; */
 }
+
 
 .input-checkbox {
+  width: 295px;
+  height: 20px;
+  margin-top: 0px;
+  border: transparent;
+  -webkit-appearance: none;
+  position: absolute;
   display: block;
-  height: auto;
-  width: auto;
-  margin: 0px;
 }
+
+
+.icon-check {
+  margin-right: 7px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+  fill: var(--primary-background-page);
+}
+
+.input-checkbox:checked + .icon-check{
+  fill: var(--accent-color);
+  border: transparent;
+}
+/* ==================================
+====== Кнопка відправки форми =======
+===================================== */
 
 .button-form {
   width: 200px;
@@ -542,8 +569,13 @@ border-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-color: transparent;
   border-radius: 4px;
+  transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
 }
 
+.button-form:hover,
+.button-form:focus {
+  background-color: var(--secondary-accent-color);
+}
 /* ============================================
 ==================== СЕКЦІЇ ===================
 =============================================== */
