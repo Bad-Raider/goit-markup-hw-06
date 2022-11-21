@@ -368,23 +368,26 @@ h1 {
 
   min-width: 528px;
   min-height: 581px;
-  padding: 8px;
+  padding: 40px;
 
   background-color: var(--primary-background-page);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-
 
 /* ===================================================
 ======= Кновка "Закрити" модальне вікно===============
 ======================================================*/
 
  .button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,19 +404,9 @@ h1 {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-close:hover {
+.button-close:hover,
+.button-close:focus {
   fill: var(--accent-color);
-}
-
-/* =========================================
-============ ФОРМА модального вікна ========
-============================================ */
-
-form {
-  padding-right: 40px;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  padding-top: 0px;
 }
 
 /* ====================================
@@ -461,6 +454,9 @@ input {
 .label-phone {
   position: relative;
 
+  font-size: 12px;
+  line-height: var(--primary-line-height);
+  letter-spacing: 0.01em;
 }
 
 
@@ -474,7 +470,10 @@ input {
 
 .label-name:hover .icon-person-form,
 .label-phone:hover .icon-phone-form,
-.label-mail:hover .icon-email-form {
+.label-mail:hover .icon-email-form,
+.label-name:focus .icon-person-form,
+.label-phone:focus .icon-phone-form,
+.label-mail:focus .icon-email-form {
   fill: var(--accent-color);
   transition: fill 250ms  cubic-bezier(0.4, 0, 0.2, 1)
 
@@ -491,13 +490,16 @@ input {
 .label-mail:hover .input-mail {
 border-color: var(--accent-color);
 transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
-
 }
 
 
 .label-textarea {
   padding-bottom: 0px;
   margin-bottom: 20px;
+
+  font-size: 12px;
+  line-height: var(--primary-line-height);
+  letter-spacing: 0.01em;
 }
 
 .textarea-coment-form {
@@ -1040,15 +1042,27 @@ address {
   border-radius: 4px;
 }
 
+.input-footer::placeholder{
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1.3;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.wraper-input-and-button-footer{
+  display: flex;
+  align-items: flex-end;
+}
 
 /* =============================================
 ============== Кнопка футера ===================
 ================================================ */
 
 .footer-button {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 12px;
   
   width: 200px;
   height: 50px;
