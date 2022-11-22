@@ -123,18 +123,20 @@
                   ></textarea>
                 </label>
 
-                <div class="checkbox-flex">
-                  <input type="checkbox" class="input-checkbox" />
+                <label class="label-checkbox">
+                  <input
+                    type="checkbox"
+                    class="input-checkbox"
+                    name="checkbox"
+                  />
                   <svg class="icon-check" width="16" height="15">
                     <use
                       href="./images/decoration-img/icons.svg#icon-check"
                     ></use>
                   </svg>
-                  <span
-                    >Погоджуюся з розсилкою та приймаю
-                    <a href="">Умови договору</a>
-                  </span>
-                </div>
+                  Погоджуюся з розсилкою та приймаю
+                  <a href="" class="contract"> Умови договору</a>
+                </label>
                 <button type="submit" class="button-form">Відправити</button>
               </form>
             </div>
@@ -525,7 +527,8 @@
                 <svg class="logo-customer" width="106" height="60">
                   <use
                     href="./images/decoration-img/icons.svg#icon-ya-co"
-                  ></use></svg              ></a>
+                  ></use></svg
+              ></a>
             </li>
             <li class="title-customer">
               <a href="" class="link-customer">
@@ -664,22 +667,26 @@
           </ul>
         </div>
 
-          <form class="footer-form">
+        <form class="footer-form">
           <label for="footer-mail" class="footer-label">
             Підпишіться на розсилку</label
           >
           <div class="wraper-input-and-button-footer">
-          <input type="mail" id="footer-mail" class="input-footer" placeholder="Email"/>
-          <buttoon type="submit" class="footer-button">
-            <span>Підписатися
-            </span>
-            <svg class="icon-send-footer" width="24" height="24">
-              <use
-                href="./images/decoration-img/icons.svg#icon-send-footer"
-              ></use>
-            </svg>
-          </buttoon>
-        </div>
+            <input
+              type="mail"
+              id="footer-mail"
+              class="input-footer"
+              placeholder="Email"
+            />
+            <buttoon type="submit" class="footer-button">
+              <span>Підписатися </span>
+              <svg class="icon-send-footer" width="24" height="24">
+                <use
+                  href="./images/decoration-img/icons.svg#icon-send-footer"
+                ></use>
+              </svg>
+            </buttoon>
+          </div>
         </form>
       </div>
     </footer>
