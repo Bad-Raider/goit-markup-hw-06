@@ -110,6 +110,7 @@ ul {
   font-family: inherit;
 }
 
+
 /* ================================================
 ======= Остання дитина без правого марджана =======
 =================================================== */
@@ -329,7 +330,15 @@ h1 {
   letter-spacing: 0.06em;
   border-radius: 4px;
   border-color: transparent;
+  transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
 }
+  
+.button-activ:hover,
+.button-activ:focus {
+  background-color: var(--secondary-accent-color);
+}
+
+
 
 /* ==========================================
 =============== Модальне вікно ==============
@@ -466,14 +475,15 @@ input {
   position: absolute;
   bottom: 21px;
   left: 15px;
+  transition: fill 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.label-name:hover .icon-person-form,
-.label-phone:hover .icon-phone-form,
-.label-mail:hover .icon-email-form,
-.label-name:focus .icon-person-form,
-.label-phone:focus .icon-phone-form,
-.label-mail:focus .icon-email-form {
+.input-name:focus + .icon-person-form,
+.input-phone:focus + .icon-phone-form,
+.input-mail:focus + .icon-email-form,
+.input-name:hover + .icon-person-form,
+.input-phone:hover + .icon-phone-form,
+.input-mail:hover + .icon-email-form {
   fill: var(--accent-color);
   transition: fill 250ms  cubic-bezier(0.4, 0, 0.2, 1)
 
@@ -483,13 +493,13 @@ input {
 .input-phone,
 .input-mail {
   padding-left: 42px;
+  transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.label-name:hover .input-name,
-.label-phone:hover .input-phone,
-.label-mail:hover .input-mail {
-border-color: var(--accent-color);
-transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
+.input-name:hover,
+.input-phone:hover,
+.input-mail:hover {
+  border-color: var(--accent-color);
 }
 
 
@@ -525,10 +535,11 @@ transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
 .label-checkbox {
   display: inline-flex;
   width: auto;
+  padding-bottom: 0px;
+
 }
 
 .input-checkbox {
-  appearance: none;
   width: 295px;
   height: 20px;
   margin-top: 0px;
@@ -564,16 +575,20 @@ transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
 ===================================== */
 
 .button-form {
+  display: block;
   width: 200px;
   height: 50px;
 
   padding: 0px;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
+  cursor: pointer;
 
   color: var(--tertiary-color-text);
   background-color: var(--accent-color);
@@ -581,6 +596,7 @@ transition: border-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
   border-color: transparent;
   border-radius: 4px;
   transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
+  
 }
 
 .button-form:hover,
@@ -1073,6 +1089,7 @@ address {
   align-items: center;
   margin-left: 12px;
   
+  padding: 0px;
   width: 200px;
   height: 50px;
 
@@ -1080,16 +1097,26 @@ address {
   font-size: var(--primary-font-size);
   line-height: 2;
   letter-spacing: 0.06em;
+  cursor: pointer;
   
   color: var(--tertiary-color-text);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: transparent;
+  transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1)
+
+}
+  
+.footer-button:hover,
+.footer-button:focus {
+  background-color: var(--secondary-accent-color);
 }
 
 .icon-send-footer {
   margin-left: 10px ;
 }
+
 /* =============================================
 ============= сторінка "Студія"=================
 ================================================ */
@@ -1269,4 +1296,5 @@ img {
 
   font-size: var(--primary-font-size);
   line-height: 1.9;
+  color: var(--primary-color-text);
 }
